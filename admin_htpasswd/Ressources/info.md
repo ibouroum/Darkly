@@ -26,3 +26,8 @@ The "/admin" route  worked , we find the flag after logging in.
 
     Protect the directory using an htaccess.
     Be carefull some robots and penetration test robots specifically look for robots.txt files for the very purpose of visiting the disallowed site sections.
+    it's simple just in your .htaccess put 
+    <<  AuthType Basic
+        AuthName "restricted area"
+        AuthUserFile /path/to/the/directory/you/are/protecting/.htpasswd
+        require valid-user >>
